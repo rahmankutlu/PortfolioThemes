@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rahman Kutlu | IT Specialist | Mobile & Web Developer | Graphic Designer</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap');
+
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+      color: #b0dfff;
+    }
+
+    main {
+      flex: 1;
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 2rem;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+      border-bottom: 2px solid #00aaff;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #d3e8ff;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li::before {
+      content: "✓";
+      color: #00ccff;
+      margin-right: 0.6rem;
+    }
+
+    .project {
+      margin-top: 1rem;
+    }
+
+    .project-title {
+      font-size: 1.3rem;
+      color: #00ccff;
+      margin-bottom: 0.4rem;
+    }
+
+    .contact-box {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    .contact-box input,
+    .contact-box textarea {
+      padding: 1rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.1);
+      color: white;
+    }
+
+    .contact-box button {
+      padding: 1rem;
+      background: #00aaff;
+      color: white;
+      font-weight: bold;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact-box button:hover {
+      background: #0090cc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      color: #88b8dd;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Rahman Kutlu</h1>
+    <p>IT Specialist | Mobile & Web Developer | Graphic Designer</p>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I'm a passionate developer with expertise in mobile and web technologies. I enjoy transforming ideas into smart digital experiences. From concept to deployment, I deliver high-quality, scalable and modern applications.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project">
+        <div class="project-title">Personal Finance Tracker</div>
+        <p>Built a mobile app using Flutter and Firebase that helps users track their expenses, income and set savings goals with real-time analytics.</p>
+      </div>
+      <div class="project">
+        <div class="project-title">AI-Powered Portfolio Generator</div>
+        <p>A React + Node.js app that uses AI prompts to automatically generate customizable personal portfolios for freelancers and developers.</p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML5 / CSS3 / JavaScript</li>
+        <li>React / Vue / Tailwind</li>
+        <li>Flutter / Dart / Firebase</li>
+        <li>Adobe XD / Photoshop / Illustrator</li>
+        <li>REST API / MongoDB / Node.js</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form class="contact-box" onsubmit="sendMessage(event)">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Rahman Kutlu — All rights reserved.</p>
+  </footer>
+
+  <script>
+    function sendMessage(e) {
+      e.preventDefault();
+      alert("Thank you for your message! I’ll get back to you soon.");
+      e.target.reset();
+    }
+  </script>
+
+</body>
+</html>

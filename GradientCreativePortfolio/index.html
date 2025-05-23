@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rahman Kutlu | IT Specialist | Mobile & Web Developer | Graphic Designer</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      background: linear-gradient(135deg, #4f46e5, #3b82f6);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 0 1.5rem;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+      color: #dbeafe;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      flex: 1;
+    }
+
+    section {
+      margin: 2.5rem 0;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 2rem;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+      transition: transform 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-4px);
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+      color: #fff;
+      border-bottom: 2px solid #93c5fd;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #e0f2fe;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .project {
+      margin-top: 1rem;
+    }
+
+    .project-title {
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin-bottom: 0.3rem;
+      color: #facc15;
+    }
+
+    form {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.9rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.1);
+      color: white;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #cbd5e1;
+    }
+
+    button {
+      padding: 0.9rem;
+      background: #facc15;
+      color: #111827;
+      font-weight: 700;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #eab308;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      font-size: 0.9rem;
+      color: #cbd5e1;
+    }
+
+    @media (max-width: 640px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      h2 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Rahman Kutlu</h1>
+    <p>IT Specialist | Mobile & Web Developer | Graphic Designer</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>About Me</h2>
+      <p>
+        With a passion for creative interfaces and solid architecture, I build web and mobile applications that perform and inspire. I’m all about vibrant design and high-quality code.
+      </p>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <div class="project">
+        <div class="project-title">Evently — Event Management App</div>
+        <p>A full-stack React Native + Firebase app that allows users to discover, create, and manage local events with dynamic RSVP and real-time chat.</p>
+      </div>
+      <div class="project">
+        <div class="project-title">Creative Landing Pages</div>
+        <p>Developed over 25+ landing pages using Next.js and Tailwind for startups and agencies with high conversion design principles.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        <li>React, Tailwind, Next.js, GSAP</li>
+        <li>Flutter, Firebase, Supabase</li>
+        <li>Node.js, Express, MongoDB</li>
+        <li>UX/UI Design, Adobe XD, Figma</li>
+        <li>Git, CI/CD, REST & GraphQL</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <form onsubmit="handleSubmit(event)">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Rahman Kutlu — All rights reserved.</p>
+  </footer>
+
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      alert("Thanks for your message! I’ll reply soon.");
+      e.target.reset();
+    }
+  </script>
+
+</body>
+</html>

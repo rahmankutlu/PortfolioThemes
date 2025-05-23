@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rahman Kutlu | IT Specialist | Mobile & Web Developer | Graphic Designer</title>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      background: #000;
+      color: #33ff33;
+      font-family: 'VT323', monospace;
+      line-height:1.4;
+      padding: 2rem;
+    }
+    .cursor { display:inline-block; width:.6ch; background:#33ff33; animation: blink 1s steps(1) infinite; }
+    @keyframes blink { 50% { background: transparent; } }
+
+    h1, h2 {
+      margin-bottom: .7rem;
+    }
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.8rem; margin-top:1.5rem; }
+
+    section { margin-bottom: 2rem; }
+
+    a { color: #33ff33; text-decoration: underline; }
+    a:hover { color: #99ff99; }
+
+    .line { margin-bottom: .5rem; }
+    .prompt::before { content: '> '; }
+
+    .projects, .skills { padding-left: 1.2rem; }
+    .projects li, .skills li { list-style: none; position: relative; }
+    .projects li::before, .skills li::before {
+      content: '[*]'; position: absolute; left:-2ch;
+    }
+
+    form {
+      display: flex; flex-direction: column; max-width: 400px;
+    }
+    input, textarea {
+      background: #000;
+      color: #33ff33;
+      border: 1px solid #33ff33;
+      padding: .6rem;
+      margin-bottom: 1rem;
+      font-family: 'VT323', monospace;
+      font-size: 1rem;
+    }
+    button {
+      background: #33ff33;
+      color: #000;
+      border: none;
+      padding: .6rem;
+      cursor: pointer;
+      font-family: 'VT323', monospace;
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+    button:hover { background: #99ff99; }
+
+    footer { margin-top: 3rem; font-size: .9rem; }
+  </style>
+</head>
+<body>
+  <h1>Rahman Kutlu<span class="cursor"></span></h1>
+  <div class="line prompt">IT Specialist | Mobile & Web Developer | Graphic Designer</div>
+
+  <section id="about">
+    <h2>About Me<span class="cursor"></span></h2>
+    <div class="line">I’m a tech enthusiast blending code and creativity to craft memorable digital experiences.</div>
+    <div class="line">10+ years of full-stack development & graphic design expertise.</div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects<span class="cursor"></span></h2>
+    <ul class="projects">
+      <li>Corporate Portal Redesign — modernized UI for Fortune 500 intranet</li>
+      <li>Smart Home Mobile App — cross-platform Flutter application</li>
+      <li>AI Portfolio Generator — Node.js & React powered tool</li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>Skills<span class="cursor"></span></h2>
+    <ul class="skills">
+      <li>JavaScript / TypeScript</li>
+      <li>React / Vue / Angular</li>
+      <li>HTML5 / CSS3 / SASS</li>
+      <li>Flutter / Dart</li>
+      <li>Adobe Creative Suite</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me<span class="cursor"></span></h2>
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="line">© 2025 Rahman Kutlu</div>
+  </footer>
+
+  <script>
+    // Blinking cursor initialization
+    document.querySelectorAll('.cursor').forEach(el => el);
+    // Simple form handler
+    document.getElementById('contactForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const name = e.target.name.value.trim();
+      if (!name) { alert('Please enter your name.'); return; }
+      alert(`Thanks, ${name}! Your message has been sent.`);
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>

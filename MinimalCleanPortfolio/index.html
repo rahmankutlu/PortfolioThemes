@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rahman Kutlu | IT Specialist | Mobile & Web Developer | Graphic Designer</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #111111;
+      line-height: 1.6;
+      padding: 0 1.5rem;
+    }
+
+    header {
+      padding: 4rem 0 2rem;
+      text-align: center;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #666;
+      margin-top: 0.5rem;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: #222;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #444;
+      margin-bottom: 0.75rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .project {
+      margin-top: 1.2rem;
+    }
+
+    .project-title {
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 0.2rem;
+      color: #222;
+    }
+
+    form {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.8rem;
+      font-size: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    button {
+      padding: 0.8rem;
+      background-color: #111;
+      color: white;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #333;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      font-size: 0.9rem;
+      color: #999;
+      border-top: 1px solid #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Rahman Kutlu</h1>
+    <p>IT Specialist | Mobile & Web Developer | Graphic Designer</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I’m a technology enthusiast with a strong background in building digital products that are not only functional but beautifully designed. My work combines technical knowledge with creativity and attention to detail.
+      </p>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <div class="project">
+        <div class="project-title">Smart Real Estate Platform</div>
+        <p>Created a responsive full-stack platform using Vue.js and Laravel to help users buy, sell, and explore properties with AI-based price estimations.</p>
+      </div>
+      <div class="project">
+        <div class="project-title">Healthcare Booking System</div>
+        <p>A Flutter app for patients to easily find and book appointments with doctors. Integrated with Google Calendar and Firebase Cloud Messaging.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        <li>Frontend: HTML, CSS, JavaScript, React, Vue</li>
+        <li>Mobile: Flutter, Dart</li>
+        <li>Backend: Node.js, Express, Laravel</li>
+        <li>Tools: Git, Figma, Firebase, Docker</li>
+        <li>Design: Adobe XD, Photoshop</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <form onsubmit="handleContact(event)">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Rahman Kutlu. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function handleContact(e) {
+      e.preventDefault();
+      alert("Thank you! Your message has been sent.");
+      e.target.reset();
+    }
+  </script>
+
+</body>
+</html>

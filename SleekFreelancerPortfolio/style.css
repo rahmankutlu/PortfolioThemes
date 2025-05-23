@@ -1,0 +1,232 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header */
+.header {
+  background-color: #222;
+  color: #fff;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.header h1 {
+  font-weight: 600;
+  font-size: 3rem;
+  margin-bottom: 0.3rem;
+}
+
+.header p {
+  font-weight: 300;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+/* Navigation */
+.nav {
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 1rem 0;
+}
+
+.nav-list li {
+  margin: 0 2rem;
+}
+
+.nav-list a {
+  color: #222;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+  color: #0a74da;
+}
+
+/* Sections */
+.section {
+  padding: 4rem 0;
+}
+
+.section h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #0a74da;
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid #bbe1fa;
+  padding-bottom: 0.5rem;
+}
+
+/* Work Section */
+.work-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 2rem;
+}
+
+.work-card {
+  border: 1.5px solid #ddd;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(10, 116, 218, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  background-color: #fff;
+}
+
+.work-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(10, 116, 218, 0.25);
+}
+
+.work-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.work-card h3 {
+  margin: 1rem 1rem 0.6rem;
+  color: #0a74da;
+  font-weight: 600;
+}
+
+.work-card p {
+  margin: 0 1rem 1rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* About Section */
+.about-section p {
+  font-size: 1.15rem;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #444;
+  font-weight: 300;
+}
+
+/* Services Section */
+.services-list {
+  list-style: none;
+  max-width: 700px;
+  margin: 0 auto;
+  padding-left: 0;
+}
+
+.services-list li {
+  background-color: #e1f0ff;
+  margin-bottom: 1rem;
+  padding: 0.9rem 1.3rem;
+  font-weight: 600;
+  color: #0a74da;
+  border-radius: 25px;
+  box-shadow: 0 3px 8px rgba(10, 116, 218, 0.15);
+  cursor: default;
+  transition: background-color 0.3s ease;
+}
+
+.services-list li:hover {
+  background-color: #bbe1fa;
+}
+
+/* Contact Section */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+form input,
+form textarea {
+  padding: 1rem;
+  margin-bottom: 1.2rem;
+  border-radius: 12px;
+  border: 1.8px solid #ccc;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #0a74da;
+  box-shadow: 0 0 8px rgba(10, 116, 218, 0.4);
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+form button {
+  background-color: #0a74da;
+  color: white;
+  font-weight: 700;
+  padding: 1rem;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 5px 12px rgba(10, 116, 218, 0.5);
+}
+
+form button:hover {
+  background-color: #005bb5;
+  box-shadow: 0 7px 15px rgba(0, 91, 181, 0.7);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  background-color: #f8f9fa;
+  color: #666;
+  font-size: 0.95rem;
+  user-select: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-list li {
+    margin: 1rem 0;
+  }
+
+  .work-cards {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rahman Kutlu | IT Specialist | Mobile & Web Developer | Graphic Designer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f1f5f9;
+      --primary: #1e3a8a;
+      --accent: #0ea5e9;
+      --text: #0f172a;
+      --glass: rgba(255, 255, 255, 0.55);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: 'Outfit', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 4rem 2rem 2rem;
+      background: linear-gradient(to right, #93c5fd, #60a5fa);
+      color: white;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: .5rem;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+      padding: 2rem;
+      background: var(--glass);
+      backdrop-filter: blur(12px);
+      border-radius: 1.5rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .section:hover {
+      transform: scale(1.02);
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+      padding-bottom: 0.2rem;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      transition: all .3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      color: var(--primary);
+      margin-bottom: .5rem;
+    }
+
+    .skills li {
+      margin-bottom: .5rem;
+    }
+
+    form {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    input, textarea {
+      padding: .9rem;
+      font-size: 1rem;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+    }
+
+    button {
+      padding: .8rem 1.5rem;
+      font-size: 1rem;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background .3s ease;
+    }
+
+    button:hover {
+      background: var(--accent);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      font-size: .9rem;
+      color: #64748b;
+    }
+
+    @media(max-width: 640px) {
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Rahman Kutlu</h1>
+    <p>IT Specialist | Mobile & Web Developer | Graphic Designer</p>
+  </header>
+
+  <main>
+
+    <section class="section">
+      <h2>About Me</h2>
+      <p>
+        I design and develop impactful digital experiences with a focus on usability, performance, and aesthetics. From complex mobile apps to pixel-perfect landing pages, I bring ideas to life with a creative edge.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Featured Projects</h2>
+      <div class="projects">
+        <div class="card">
+          <h3>BrandSpace Studio</h3>
+          <p>A full-stack web platform for creative agencies to manage portfolios and client feedback.</p>
+        </div>
+        <div class="card">
+          <h3>FlutterFit</h3>
+          <p>Cross-platform fitness app built in Flutter with real-time progress sync and custom workouts.</p>
+        </div>
+        <div class="card">
+          <h3>Serenity Vibes</h3>
+          <p>AI-generated relaxing music videos and streaming site with a minimalist design and smart player.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li>React, Vue, Next.js, Svelte</li>
+        <li>Flutter, SwiftUI, Kotlin</li>
+        <li>Node.js, Express, MongoDB</li>
+        <li>TailwindCSS, SCSS, Motion</li>
+        <li>Adobe XD, Figma, Blender</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Contact Me</h2>
+      <form onsubmit="submitForm(event)">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Rahman Kutlu. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function submitForm(e) {
+      e.preventDefault();
+      alert("Thanks for reaching out! I'll be in touch shortly.");
+      e.target.reset();
+    }
+  </script>
+
+</body>
+</html>
